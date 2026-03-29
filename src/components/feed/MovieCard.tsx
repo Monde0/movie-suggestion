@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { usePoster } from '../../hooks/usePoster';
 import { useAppStore } from '../../store/useAppStore';
 import type { ScoredMovie } from '../../types';
 import { Badge } from '../ui/Badge';
@@ -10,6 +11,7 @@ interface MovieCardProps {
 export function MovieCard({ movie }: MovieCardProps) {
   const openMovie = useAppStore((s) => s.openMovie);
   const preferences = useAppStore((s) => s.preferences);
+  const posterUrl = usePoster(movie.id);
 
   const isLiked = preferences.likedMovieIds.includes(movie.id);
   const isWatchLater = preferences.watchLaterIds.includes(movie.id);
@@ -25,8 +27,16 @@ export function MovieCard({ movie }: MovieCardProps) {
       onClick={() => openMovie(movie)}
       className="relative rounded-xl overflow-hidden cursor-pointer group aspect-[2/3] bg-zinc-800"
     >
-      {/* Gradient poster */}
+      {/* Gradient fallback always underneath */}
       <div className={`absolute inset-0 bg-gradient-to-br ${movie.posterColor}`} />
+      {/* Real poster on top once loaded */}
+      {posterUrl && (
+        <img
+          src={posterUrl}
+          alt={movie.title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      )}
 
       {/* Status badges */}
       <div className="absolute top-2 left-2 flex gap-1">

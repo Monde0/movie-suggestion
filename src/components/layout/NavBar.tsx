@@ -7,6 +7,7 @@ export function NavBar() {
   const setView = useAppStore((s) => s.setView);
   const resetPreferences = useAppStore((s) => s.resetPreferences);
   const watchLaterIds = useAppStore((s) => s.preferences.watchLaterIds);
+  const likedIds = useAppStore((s) => s.preferences.likedMovieIds);
 
   return (
     <nav className="sticky top-0 z-30 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800 px-4 md:px-8">
@@ -23,6 +24,14 @@ export function NavBar() {
         <div className="flex items-center gap-1">
           <NavLink active={currentView === 'feed'} onClick={() => setView('feed')}>
             Suggestions
+          </NavLink>
+          <NavLink active={currentView === 'liked'} onClick={() => setView('liked')}>
+            Liked
+            {likedIds.length > 0 && (
+              <span className="ml-1.5 px-1.5 py-0.5 rounded-full bg-red-600 text-white text-xs font-bold leading-none">
+                {likedIds.length}
+              </span>
+            )}
           </NavLink>
           <NavLink active={currentView === 'watchlater'} onClick={() => setView('watchlater')}>
             Watch Later

@@ -6,13 +6,13 @@ import { applyDislike, applyLike, buildInitialWeights } from '../utils/preferenc
 interface AppState {
   preferences: UserPreferences;
   activeMovie: Movie | null;
-  currentView: 'onboarding' | 'feed' | 'watchlater';
+  currentView: 'onboarding' | 'feed' | 'watchlater' | 'liked';
 
   completeOnboarding: (genres: Genre[]) => void;
   applyMovieAction: (movie: Movie, action: MovieAction) => void;
   openMovie: (movie: Movie) => void;
   closeMovie: () => void;
-  setView: (view: 'feed' | 'watchlater') => void;
+  setView: (view: 'feed' | 'watchlater' | 'liked') => void;
   resetPreferences: () => void;
 }
 
