@@ -7,12 +7,16 @@ interface AppState {
   preferences: UserPreferences;
   activeMovie: Movie | null;
   currentView: 'onboarding' | 'feed' | 'watchlater' | 'liked';
+  dynamicMovies: Movie[];
+  isLoadingDynamic: boolean;
 
   completeOnboarding: (genres: Genre[]) => void;
   applyMovieAction: (movie: Movie, action: MovieAction) => void;
   openMovie: (movie: Movie) => void;
   closeMovie: () => void;
   setView: (view: 'feed' | 'watchlater' | 'liked') => void;
+  setDynamicMovies: (movies: Movie[]) => void;
+  setLoadingDynamic: (loading: boolean) => void;
   resetPreferences: () => void;
 }
 
@@ -31,6 +35,8 @@ export const useAppStore = create<AppState>()(
       preferences: defaultPreferences,
       activeMovie: null,
       currentView: 'onboarding',
+      dynamicMovies: [],
+      isLoadingDynamic: false,
 
       completeOnboarding: (genres) => {
         set({
@@ -91,6 +97,8 @@ export const useAppStore = create<AppState>()(
       openMovie: (movie) => set({ activeMovie: movie }),
       closeMovie: () => set({ activeMovie: null }),
       setView: (view) => set({ currentView: view }),
+      setDynamicMovies: (movies) => set({ dynamicMovies: movies, isLoadingDynamic: false }),
+      setLoadingDynamic: (loading) => set({ isLoadingDynamic: loading }),
 
       resetPreferences: () => {
         set({
@@ -103,6 +111,7 @@ export const useAppStore = create<AppState>()(
     {
       name: 'cinematch-preferences',
       partialize: (state) => ({ preferences: state.preferences, currentView: state.currentView }),
+      // dynamicMovies is excluded — it has its own localStorage cache in wikidata.ts
     }
   )
 );

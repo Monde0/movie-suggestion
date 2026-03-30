@@ -2,9 +2,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useLikedMovies, useMovieSuggestions, useWatchLaterMovies } from '../../hooks/useMovieSuggestions';
 import { useAppStore } from '../../store/useAppStore';
 import { MovieCard } from './MovieCard';
+import { useAllMovies } from '../../hooks/useMovieSuggestions';
 
 export function MovieFeed() {
   const currentView = useAppStore((s) => s.currentView);
+  const isLoadingDynamic = useAppStore((s) => s.isLoadingDynamic);
+  const allMovies = useAllMovies();
   const suggestions = useMovieSuggestions();
   const watchLater = useWatchLaterMovies();
   const liked = useLikedMovies();
@@ -47,11 +50,27 @@ export function MovieFeed() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="mb-4"
+        className="mb-4 flex items-center gap-4"
       >
         <h2 className="text-zinc-400 text-sm font-medium uppercase tracking-wider">
           {label}
         </h2>
+        <AnimatePresence>
+          {isLoadingDynamic && currentView === 'feed' && (
+            <motion.span
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0 }}
+              className="flex items-center gap-1.5 text-xs text-zinc-500"
+            >
+              <svg className="w-3 h-3 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 100 16v-4l-3 3 3 3v-4a8 8 0 01-8-8z" />
+              </svg>
+              fetching more from {allMovies.length} total…
+            </motion.span>
+          )}
+        </AnimatePresence>
       </motion.div>
 
       <AnimatePresence mode="popLayout">
