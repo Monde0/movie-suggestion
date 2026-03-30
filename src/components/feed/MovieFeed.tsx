@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLikedMovies, useMovieSuggestions, useWatchLaterMovies } from '../../hooks/useMovieSuggestions';
 import { useAppStore } from '../../store/useAppStore';
 import { MovieCard } from './MovieCard';
 import { useAllMovies } from '../../hooks/useMovieSuggestions';
+import { FilterBar } from './FilterBar';
+import type { SortOption } from '../../types';
 
 export function MovieFeed() {
   const currentView = useAppStore((s) => s.currentView);
@@ -12,17 +15,35 @@ export function MovieFeed() {
   const watchLater = useWatchLaterMovies();
   const liked = useLikedMovies();
 
-  const movies =
+  const [sort, setSort] = useState<SortOption>('relevance');
+  const [studioFilter, setStudioFilter] = useState<string | null>(null);
+
+  const baseMovies =
     currentView === 'watchlater' ? watchLater :
     currentView === 'liked' ? liked :
     suggestions;
+
+  // Apply studio filter
+  const studioFiltered = studioFilter
+    ? baseMovies.filter((m) => (m.studio ?? 'Independent') === studioFilter)
+    : baseMovies;
+
+  // Apply sort (suggestions are already relevance-sorted)
+  const movies = (() => {
+    if (sort === 'relevance') return studioFiltered;
+    const copy = [...studioFiltered];
+    if (sort === 'newest') return copy.sort((a, b) => b.year - a.year);
+    if (sort === 'oldest') return copy.sort((a, b) => a.year - b.year);
+    if (sort === 'rating') return copy.sort((a, b) => b.rating - a.rating);
+    return copy;
+  })();
 
   const emptyState =
     currentView === 'watchlater' ? { icon: 'bookmark', message: 'No movies saved yet', sub: 'Bookmark movies from the suggestions feed' } :
     currentView === 'liked' ? { icon: 'heart', message: 'No liked movies yet', sub: 'Like movies from the suggestions feed' } :
     null;
 
-  if (emptyState && movies.length === 0) {
+  if (emptyState && baseMovies.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-24 text-zinc-500">
         {emptyState.icon === 'heart' ? (
@@ -73,16 +94,32 @@ export function MovieFeed() {
         </AnimatePresence>
       </motion.div>
 
-      <AnimatePresence mode="popLayout">
-        <motion.div
-          layout
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3"
-        >
-          {movies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
-        </motion.div>
-      </AnimatePresence>
+      <div className="mb-4 -mx-4 md:-mx-8">
+        <FilterBar
+          sort={sort}
+          onSortChange={setSort}
+          studio={studioFilter}
+          onStudioChange={setStudioFilter}
+        />
+      </div>
+
+      {movies.length === 0 ? (
+        <div className="flex flex-col items-center justify-center py-16 text-zinc-500">
+          <p className="text-base font-medium">No movies match these filters</p>
+          <p className="text-sm mt-1">Try a different studio or sort option</p>
+        </div>
+      ) : (
+        <AnimatePresence mode="popLayout">
+          <motion.div
+            layout
+            className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3"
+          >
+            {movies.map((movie) => (
+              <MovieCard key={movie.id} movie={movie} />
+            ))}
+          </motion.div>
+        </AnimatePresence>
+      )}
     </div>
   );
 }

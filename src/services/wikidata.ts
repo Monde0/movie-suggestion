@@ -1,10 +1,10 @@
 import type { Genre, Movie } from '../types';
+import { normalizeStudio } from '../utils/studios';
 
 const ENDPOINT = 'https://query.wikidata.org/sparql';
-const CACHE_KEY = 'cinematch-wikidata-v1';
-const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 days
+const CACHE_KEY = 'cinematch-wikidata-v2'; // bump when query changes
+const CACHE_TTL = 7 * 24 * 60 * 60 * 1000;
 
-// Order matters — more specific keywords first
 const GENRE_KEYWORDS: Array<[string, Genre]> = [
   ['science fiction', 'Sci-Fi'],
   ['animated',        'Animation'],
@@ -47,9 +47,6 @@ function mapGenres(genreStr: string): Genre[] {
   return [...seen];
 }
 
-// Fetch ~500 notable films that have English Wikipedia articles.
-// We use SAMPLE() aggregates to collapse multi-valued properties (director, actor, genre)
-// into one row per film, which avoids cartesian-product blowup.
 const QUERY = `
 SELECT DISTINCT ?imdbId
   (SAMPLE(?title) AS ?title)
@@ -58,6 +55,7 @@ SELECT DISTINCT ?imdbId
   (SAMPLE(?actorLabel) AS ?mainActor)
   (GROUP_CONCAT(DISTINCT ?genreLabel; SEPARATOR="|") AS ?genres)
   (SAMPLE(?desc) AS ?description)
+  (SAMPLE(?companyLabel) AS ?studio)
 WHERE {
   ?film wdt:P31 wd:Q11424 ;
         wdt:P345 ?imdbId ;
@@ -71,6 +69,7 @@ WHERE {
   ?dir   rdfs:label ?dirLabel   FILTER(LANG(?dirLabel)   = "en") .
   ?actor rdfs:label ?actorLabel FILTER(LANG(?actorLabel) = "en") .
   ?genre rdfs:label ?genreLabel FILTER(LANG(?genreLabel) = "en") .
+  OPTIONAL { ?film wdt:P272 ?company . ?company rdfs:label ?companyLabel FILTER(LANG(?companyLabel) = "en") }
   OPTIONAL { ?film schema:description ?desc FILTER(LANG(?desc) = "en") }
   FILTER(YEAR(?date) >= 1970 && YEAR(?date) <= 2024)
 }
@@ -121,6 +120,9 @@ export async function fetchWikidataMovies(): Promise<Movie[]> {
       const title = b.title?.value ?? '';
       if (!title) return [];
 
+      const rawStudio = b.studio?.value ?? '';
+      const studio = rawStudio ? normalizeStudio(rawStudio) : undefined;
+
       return [{
         id: imdbId,
         title,
@@ -131,6 +133,7 @@ export async function fetchWikidataMovies(): Promise<Movie[]> {
         description: b.description?.value ?? `A ${year} ${genres[0].toLowerCase()} film.`,
         posterColor: GENRE_COLORS[genres[0]],
         rating: 7.0,
+        studio,
       } satisfies Movie];
     });
 

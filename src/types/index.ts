@@ -27,7 +27,10 @@ export interface Movie {
   description: string;
   posterColor: string; // Tailwind gradient classes
   rating: number;
+  studio?: string; // canonical studio name, undefined = unknown
 }
+
+export type SortOption = 'relevance' | 'newest' | 'oldest' | 'rating';
 
 export interface GenreWeight {
   genre: Genre;

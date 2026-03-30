@@ -1,7 +1,6 @@
 import type { Movie } from '../types';
 
 export const movies: Movie[] = [
-  // ACTION
   {
     id: 'tt0468569',
     title: 'The Dark Knight',
@@ -12,6 +11,7 @@ export const movies: Movie[] = [
     description: 'Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos with a terrifying wave of anarchy.',
     posterColor: 'from-slate-900 to-zinc-800',
     rating: 9.0,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0110912',
@@ -23,6 +23,7 @@ export const movies: Movie[] = [
     description: 'Interweaving tales of crime in Los Angeles told through a nonlinear narrative full of dark humor and violence.',
     posterColor: 'from-yellow-900 to-red-950',
     rating: 8.9,
+    studio: 'Miramax',
   },
   {
     id: 'tt0137523',
@@ -34,6 +35,7 @@ export const movies: Movie[] = [
     description: 'An insomniac office worker and a soap salesman form an underground fight club that evolves into something far more sinister.',
     posterColor: 'from-red-950 to-zinc-900',
     rating: 8.8,
+    studio: '20th Century Fox',
   },
   {
     id: 'tt0133093',
@@ -45,6 +47,7 @@ export const movies: Movie[] = [
     description: 'A computer programmer discovers that reality as he knows it is a simulation, and joins a rebellion against its machine controllers.',
     posterColor: 'from-green-950 to-zinc-900',
     rating: 8.7,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0245429',
@@ -56,6 +59,7 @@ export const movies: Movie[] = [
     description: 'A young girl becomes trapped in a mysterious spirit world and must work in a bathhouse to rescue her parents.',
     posterColor: 'from-blue-800 to-purple-900',
     rating: 8.6,
+    studio: 'Studio Ghibli',
   },
   {
     id: 'tt0816692',
@@ -67,6 +71,7 @@ export const movies: Movie[] = [
     description: 'A team of explorers travel through a wormhole in space in an attempt to ensure humanity\'s survival across dimensions.',
     posterColor: 'from-indigo-950 to-slate-900',
     rating: 8.6,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt1375666',
@@ -78,6 +83,7 @@ export const movies: Movie[] = [
     description: 'A thief who enters people\'s dreams to steal secrets is given an even more complex mission: planting an idea.',
     posterColor: 'from-blue-950 to-gray-900',
     rating: 8.8,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0120737',
@@ -89,6 +95,7 @@ export const movies: Movie[] = [
     description: 'A young hobbit and a fellowship of companions set out on a perilous quest to destroy a powerful ring and save Middle-earth.',
     posterColor: 'from-amber-900 to-green-950',
     rating: 8.8,
+    studio: 'New Line Cinema',
   },
   {
     id: 'tt0167260',
@@ -100,6 +107,7 @@ export const movies: Movie[] = [
     description: 'Gandalf and Aragorn lead the World of Men against Sauron\'s army to draw his gaze from Frodo and Sam as they approach Mount Doom.',
     posterColor: 'from-amber-800 to-slate-900',
     rating: 9.0,
+    studio: 'New Line Cinema',
   },
   {
     id: 'tt0111161',
@@ -111,6 +119,7 @@ export const movies: Movie[] = [
     description: 'A banker convicted of murder befriends a fellow prisoner and finds redemption through acts of decency over two decades.',
     posterColor: 'from-slate-700 to-slate-900',
     rating: 9.3,
+    studio: 'Sony / Columbia',
   },
   {
     id: 'tt0068646',
@@ -122,6 +131,7 @@ export const movies: Movie[] = [
     description: 'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.',
     posterColor: 'from-zinc-800 to-red-950',
     rating: 9.2,
+    studio: 'Paramount',
   },
   {
     id: 'tt0071562',
@@ -133,6 +143,7 @@ export const movies: Movie[] = [
     description: 'The early life of Vito Corleone is portrayed as his son Michael expands and tightens his grip on the family crime syndicate.',
     posterColor: 'from-stone-800 to-zinc-950',
     rating: 9.0,
+    studio: 'Paramount',
   },
   {
     id: 'tt0167261',
@@ -144,6 +155,7 @@ export const movies: Movie[] = [
     description: 'The Fellowship is scattered, and Frodo and Sam inch closer to Mordor with the treacherous Gollum as their guide.',
     posterColor: 'from-green-900 to-slate-900',
     rating: 8.7,
+    studio: 'New Line Cinema',
   },
   {
     id: 'tt0253474',
@@ -155,6 +167,7 @@ export const movies: Movie[] = [
     description: 'A brilliant Polish-Jewish pianist struggles to survive the destruction of the Warsaw ghetto during World War II.',
     posterColor: 'from-stone-700 to-stone-950',
     rating: 8.5,
+    studio: 'Universal',
   },
   {
     id: 'tt0109830',
@@ -166,6 +179,7 @@ export const movies: Movie[] = [
     description: 'The extraordinary life of Forrest Gump, a man with a low IQ who unwittingly influences several historical events in 20th-century America.',
     posterColor: 'from-sky-700 to-green-800',
     rating: 8.8,
+    studio: 'Paramount',
   },
   {
     id: 'tt0120815',
@@ -177,6 +191,7 @@ export const movies: Movie[] = [
     description: 'Following the Normandy Landings, a group of US soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.',
     posterColor: 'from-olive-700 to-zinc-900',
     rating: 8.6,
+    studio: 'DreamWorks',
   },
   {
     id: 'tt0114369',
@@ -188,6 +203,7 @@ export const movies: Movie[] = [
     description: 'Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his modus operandi.',
     posterColor: 'from-neutral-800 to-red-950',
     rating: 8.6,
+    studio: 'New Line Cinema',
   },
   {
     id: 'tt0120586',
@@ -199,6 +215,7 @@ export const movies: Movie[] = [
     description: 'A former neo-nazi skinhead tries to prevent his younger brother from going down the same violent path after being released from prison.',
     posterColor: 'from-gray-700 to-zinc-950',
     rating: 8.5,
+    studio: 'New Line Cinema',
   },
   {
     id: 'tt0364569',
@@ -210,6 +227,7 @@ export const movies: Movie[] = [
     description: 'After being inexplicably imprisoned for 15 years, a man is released and has five days to find his captor — before a shocking truth is revealed.',
     posterColor: 'from-violet-900 to-slate-900',
     rating: 8.4,
+    studio: 'Independent',
   },
   {
     id: 'tt0372784',
@@ -221,6 +239,7 @@ export const movies: Movie[] = [
     description: 'After witnessing his parents\' murder, Bruce Wayne trains to become a vigilante and faces off against the criminal Ra\'s al Ghul.',
     posterColor: 'from-slate-800 to-blue-950',
     rating: 8.2,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0317705',
@@ -232,6 +251,7 @@ export const movies: Movie[] = [
     description: 'A family of undercover superheroes try to live quietly until they are forced to spring into action to save the world.',
     posterColor: 'from-orange-700 to-red-900',
     rating: 8.0,
+    studio: 'Disney',
   },
   {
     id: 'tt0435761',
@@ -243,6 +263,7 @@ export const movies: Movie[] = [
     description: 'Woody, Buzz, and their toy friends are accidentally sent to a daycare center where they must escape the tyrannical Lotso Bear.',
     posterColor: 'from-sky-600 to-yellow-700',
     rating: 8.3,
+    studio: 'Disney',
   },
   {
     id: 'tt0120689',
@@ -254,6 +275,7 @@ export const movies: Movie[] = [
     description: 'A death row prison guard befriends an inmate with a mysterious gift, leading to a profound journey of humanity and miracles.',
     posterColor: 'from-teal-900 to-slate-950',
     rating: 8.6,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0082971',
@@ -265,6 +287,7 @@ export const movies: Movie[] = [
     description: 'Archaeologist Indiana Jones races against Nazi operatives to find the mystical Ark of the Covenant, a weapon of divine power.',
     posterColor: 'from-yellow-800 to-amber-950',
     rating: 8.4,
+    studio: 'Paramount',
   },
   {
     id: 'tt0080684',
@@ -276,6 +299,7 @@ export const movies: Movie[] = [
     description: 'After the Rebels are defeated, Luke Skywalker trains with Yoda while his friends are pursued by Darth Vader and the Empire.',
     posterColor: 'from-slate-700 to-gray-950',
     rating: 8.7,
+    studio: '20th Century Fox',
   },
   {
     id: 'tt0088763',
@@ -287,6 +311,7 @@ export const movies: Movie[] = [
     description: 'A teenager accidentally travels back to 1955 in a time machine built by his eccentric inventor friend and must ensure his parents fall in love.',
     posterColor: 'from-orange-700 to-zinc-800',
     rating: 8.5,
+    studio: 'Universal',
   },
   {
     id: 'tt0054215',
@@ -298,6 +323,7 @@ export const movies: Movie[] = [
     description: 'A secretary on the run checks into a remote motel run by a disturbed young man dominated by his mother.',
     posterColor: 'from-neutral-700 to-neutral-950',
     rating: 8.5,
+    studio: 'Paramount',
   },
   {
     id: 'tt0050083',
@@ -309,6 +335,7 @@ export const movies: Movie[] = [
     description: 'A jury deliberates the murder case of an 18-year-old boy as one holdout challenges the prejudices and assumptions of his peers.',
     posterColor: 'from-stone-600 to-zinc-900',
     rating: 9.0,
+    studio: 'Independent',
   },
   {
     id: 'tt0986264',
@@ -320,6 +347,7 @@ export const movies: Movie[] = [
     description: 'A 78-year-old widower ties thousands of balloons to his house and flies to South America, joined by a young wilderness scout.',
     posterColor: 'from-sky-500 to-amber-700',
     rating: 8.3,
+    studio: 'Disney',
   },
   {
     id: 'tt0910970',
@@ -331,6 +359,7 @@ export const movies: Movie[] = [
     description: 'A small waste-collecting robot falls in love with another robot while on an interstellar journey that could determine the fate of mankind.',
     posterColor: 'from-blue-900 to-orange-900',
     rating: 8.4,
+    studio: 'Disney',
   },
   {
     id: 'tt0073195',
@@ -342,6 +371,7 @@ export const movies: Movie[] = [
     description: 'A police chief, a marine biologist, and a shark hunter struggle to protect a beach resort town from a great white shark.',
     posterColor: 'from-cyan-900 to-blue-950',
     rating: 8.0,
+    studio: 'Universal',
   },
   {
     id: 'tt0062622',
@@ -353,6 +383,7 @@ export const movies: Movie[] = [
     description: 'Humanity finds a mysterious artifact buried beneath the lunar surface while the spaceship\'s intelligent computer HAL turns hostile.',
     posterColor: 'from-slate-900 to-violet-950',
     rating: 8.3,
+    studio: 'MGM',
   },
   {
     id: 'tt0050825',
@@ -364,6 +395,7 @@ export const movies: Movie[] = [
     description: 'A World War I French general orders a suicidal attack; when it fails, he court-martials three soldiers for cowardice.',
     posterColor: 'from-stone-700 to-slate-900',
     rating: 8.4,
+    studio: 'Independent',
   },
   {
     id: 'tt0075314',
@@ -375,6 +407,7 @@ export const movies: Movie[] = [
     description: 'A mentally unstable veteran works as a nighttime taxi driver in New York City, where sickening corruption drives him to action.',
     posterColor: 'from-red-900 to-zinc-900',
     rating: 8.3,
+    studio: 'Sony / Columbia',
   },
   {
     id: 'tt0169547',
@@ -386,6 +419,7 @@ export const movies: Movie[] = [
     description: 'A middle-aged father has a midlife crisis after becoming infatuated with his daughter\'s best friend, triggering dangerous change.',
     posterColor: 'from-red-700 to-rose-950',
     rating: 8.3,
+    studio: 'DreamWorks',
   },
   {
     id: 'tt0034583',
@@ -397,6 +431,7 @@ export const movies: Movie[] = [
     description: 'A cynical American expatriate struggles to decide whether or not to help his former lover and her fugitive husband escape French Morocco.',
     posterColor: 'from-amber-700 to-stone-900',
     rating: 8.5,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0047478',
@@ -408,6 +443,7 @@ export const movies: Movie[] = [
     description: 'A poor village under attack by bandits recruits seven wandering samurai to help defend them, forming an unlikely bond.',
     posterColor: 'from-stone-600 to-stone-900',
     rating: 8.6,
+    studio: 'Independent',
   },
   {
     id: 'tt0095765',
@@ -419,6 +455,7 @@ export const movies: Movie[] = [
     description: 'A filmmaker recalls his childhood in a small Sicilian village and his friendship with the projectionist of the local cinema.',
     posterColor: 'from-orange-600 to-amber-900',
     rating: 8.5,
+    studio: 'Independent',
   },
   {
     id: 'tt0105236',
@@ -430,6 +467,7 @@ export const movies: Movie[] = [
     description: 'When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect that one of them is a police informant.',
     posterColor: 'from-slate-700 to-red-950',
     rating: 8.3,
+    studio: 'Miramax',
   },
   {
     id: 'tt0209144',
@@ -441,6 +479,7 @@ export const movies: Movie[] = [
     description: 'A man with short-term memory loss tries to track down his wife\'s murderer using Polaroid photographs and tattooed clues.',
     posterColor: 'from-gray-800 to-indigo-950',
     rating: 8.4,
+    studio: 'Independent',
   },
   {
     id: 'tt0070735',
@@ -452,6 +491,7 @@ export const movies: Movie[] = [
     description: 'Two grifters team up to pull off the ultimate con against a powerful mobster who had their friend murdered.',
     posterColor: 'from-amber-600 to-stone-800',
     rating: 8.3,
+    studio: 'Universal',
   },
   {
     id: 'tt0093058',
@@ -463,6 +503,7 @@ export const movies: Movie[] = [
     description: 'A pragmatic U.S. Marine observes the dehumanizing effects of the Vietnam War on his fellow recruits from training camp to the battlefield.',
     posterColor: 'from-olive-800 to-zinc-950',
     rating: 8.3,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0052357',
@@ -474,6 +515,7 @@ export const movies: Movie[] = [
     description: 'A retired detective with acrophobia is hired to trail a woman but becomes dangerously obsessed with her mysterious life.',
     posterColor: 'from-teal-700 to-slate-900',
     rating: 8.3,
+    studio: 'Paramount',
   },
   {
     id: 'tt0114814',
@@ -485,6 +527,7 @@ export const movies: Movie[] = [
     description: 'A sole survivor tells police about the events leading up to a massacre involving the mysterious crime lord Keyser Söze.',
     posterColor: 'from-gray-700 to-zinc-950',
     rating: 8.5,
+    studio: 'Independent',
   },
   {
     id: 'tt0047396',
@@ -496,6 +539,7 @@ export const movies: Movie[] = [
     description: 'A wheelchair-bound photographer spies on his neighbors through his apartment window and suspects one of them may have committed murder.',
     posterColor: 'from-blue-700 to-slate-950',
     rating: 8.4,
+    studio: 'Paramount',
   },
   {
     id: 'tt0079470',
@@ -507,6 +551,7 @@ export const movies: Movie[] = [
     description: 'Brian Cohen is an ordinary man born on the same day as Jesus who is accidentally hailed as the new Messiah.',
     posterColor: 'from-yellow-600 to-amber-800',
     rating: 8.0,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0053125',
@@ -518,6 +563,7 @@ export const movies: Movie[] = [
     description: 'A New York advertising executive is mistaken for a government agent and is pursued across the country by enemy spies.',
     posterColor: 'from-sky-700 to-blue-950',
     rating: 8.3,
+    studio: 'MGM',
   },
   {
     id: 'tt0099685',
@@ -529,6 +575,7 @@ export const movies: Movie[] = [
     description: 'The story of Henry Hill and his life in the mob, covering his ruthless rise and bloody fall from power.',
     posterColor: 'from-red-800 to-zinc-900',
     rating: 8.7,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0088247',
@@ -540,6 +587,7 @@ export const movies: Movie[] = [
     description: 'A cyborg assassin is sent back in time to kill the mother of a future resistance leader, while a soldier follows to protect her.',
     posterColor: 'from-red-900 to-gray-950',
     rating: 8.1,
+    studio: 'Independent',
   },
   {
     id: 'tt0116231',
@@ -551,6 +599,7 @@ export const movies: Movie[] = [
     description: 'A badly burned World War II pilot recounts his past love affair with a married woman through flashbacks as a nurse tends to him.',
     posterColor: 'from-amber-800 to-red-950',
     rating: 7.4,
+    studio: 'Miramax',
   },
   {
     id: 'tt0166924',
@@ -562,6 +611,7 @@ export const movies: Movie[] = [
     description: 'An aspiring actress discovers a mysterious amnesiac woman in her apartment, and together they unravel a dark Hollywood mystery.',
     posterColor: 'from-purple-900 to-slate-950',
     rating: 7.9,
+    studio: 'Universal',
   },
   {
     id: 'tt0071853',
@@ -573,6 +623,7 @@ export const movies: Movie[] = [
     description: 'King Arthur and his Knights of the Round Table embark on a surreal and hilariously absurd quest for the Holy Grail.',
     posterColor: 'from-green-700 to-stone-900',
     rating: 8.2,
+    studio: 'Independent',
   },
   {
     id: 'tt0110357',
@@ -584,6 +635,7 @@ export const movies: Movie[] = [
     description: 'A young lion prince flees his kingdom after the murder of his father, only to learn the true meaning of responsibility and bravery.',
     posterColor: 'from-orange-500 to-amber-800',
     rating: 8.5,
+    studio: 'Disney',
   },
   {
     id: 'tt0073486',
@@ -595,6 +647,7 @@ export const movies: Movie[] = [
     description: 'A criminal pleads insanity to serve his sentence in a mental institution and clashes with a tyrannical head nurse.',
     posterColor: 'from-green-800 to-teal-950',
     rating: 8.7,
+    studio: 'Independent',
   },
   {
     id: 'tt0022100',
@@ -606,6 +659,7 @@ export const movies: Movie[] = [
     description: 'A serial killer of children is hunted by the police and the criminal underworld who want to stop him before the police catch them all.',
     posterColor: 'from-neutral-700 to-neutral-950',
     rating: 8.3,
+    studio: 'Independent',
   },
   {
     id: 'tt0338013',
@@ -617,6 +671,7 @@ export const movies: Movie[] = [
     description: 'After discovering their exes erased them from memory, an estranged couple undergoes a similar procedure — only to fall in love again.',
     posterColor: 'from-sky-800 to-violet-900',
     rating: 8.3,
+    studio: 'Universal',
   },
   {
     id: 'tt0021749',
@@ -628,6 +683,7 @@ export const movies: Movie[] = [
     description: 'A tramp falls in love with a blind flower girl and struggles to raise money for an operation that could restore her sight.',
     posterColor: 'from-stone-500 to-stone-800',
     rating: 8.5,
+    studio: 'Independent',
   },
   {
     id: 'tt0082096',
@@ -639,17 +695,7 @@ export const movies: Movie[] = [
     description: 'A German submarine patrol during World War II presents the claustrophobic and psychological horrors of underwater naval warfare.',
     posterColor: 'from-teal-900 to-gray-950',
     rating: 8.3,
-  },
-  {
-    id: 'tt1049413',
-    title: 'Up',
-    year: 2009,
-    genres: ['Animation', 'Comedy', 'Drama'],
-    director: 'Pete Docter',
-    mainActor: 'Edward Asner',
-    description: 'A 78-year-old man ties thousands of balloons to his house and sets off on an adventure to South America to fulfill a lifelong dream.',
-    posterColor: 'from-sky-600 to-orange-700',
-    rating: 8.3,
+    studio: 'Independent',
   },
   {
     id: 'tt0041959',
@@ -661,6 +707,7 @@ export const movies: Movie[] = [
     description: 'Pulp novelist Holly Martins arrives in Vienna to find his friend Harry Lime murdered — but clues suggest Lime may still be alive.',
     posterColor: 'from-gray-600 to-slate-900',
     rating: 8.1,
+    studio: 'Independent',
   },
   {
     id: 'tt0059578',
@@ -672,6 +719,7 @@ export const movies: Movie[] = [
     description: 'Two bounty hunters with sharply different intentions team up to track down a Mexican outlaw who is also being hunted by the law.',
     posterColor: 'from-yellow-700 to-stone-900',
     rating: 8.2,
+    studio: 'Independent',
   },
   {
     id: 'tt0361748',
@@ -683,6 +731,7 @@ export const movies: Movie[] = [
     description: 'In Nazi-occupied France, a group of Jewish-American soldiers and a young theater owner devise competing plans to kill Hitler.',
     posterColor: 'from-olive-700 to-amber-950',
     rating: 8.3,
+    studio: 'Universal',
   },
   {
     id: 'tt0099348',
@@ -694,6 +743,7 @@ export const movies: Movie[] = [
     description: 'A Civil War soldier befriends a Lakota Sioux tribe and gradually chooses their way of life over his own culture.',
     posterColor: 'from-amber-700 to-brown-900',
     rating: 8.0,
+    studio: 'Independent',
   },
   {
     id: 'tt0119217',
@@ -705,6 +755,7 @@ export const movies: Movie[] = [
     description: 'A janitor at MIT who is secretly a mathematical genius hides his potential until a therapist helps him face his past.',
     posterColor: 'from-blue-700 to-slate-900',
     rating: 8.3,
+    studio: 'Miramax',
   },
   {
     id: 'tt0114709',
@@ -716,6 +767,7 @@ export const movies: Movie[] = [
     description: 'A cowboy doll is threatened by a new spaceman toy and learns to put jealousy aside in a series of harrowing adventures.',
     posterColor: 'from-sky-500 to-green-700',
     rating: 8.3,
+    studio: 'Disney',
   },
   {
     id: 'tt0169547b',
@@ -727,6 +779,7 @@ export const movies: Movie[] = [
     description: 'In post-Civil War Spain, a girl escapes into a mythical underworld to cope with her brutal stepfather and cruel reality.',
     posterColor: 'from-emerald-900 to-slate-950',
     rating: 8.2,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt1853728',
@@ -738,6 +791,7 @@ export const movies: Movie[] = [
     description: 'A freed slave teams with a German bounty hunter to rescue his wife from a brutal Mississippi plantation owner.',
     posterColor: 'from-amber-600 to-red-900',
     rating: 8.4,
+    studio: 'Sony / Columbia',
   },
   {
     id: 'tt0172495',
@@ -749,6 +803,7 @@ export const movies: Movie[] = [
     description: 'A Roman general is reduced to slavery after his family is murdered, and rises as a gladiator to seek revenge against the corrupt emperor.',
     posterColor: 'from-stone-600 to-amber-950',
     rating: 8.5,
+    studio: 'DreamWorks',
   },
   {
     id: 'tt0266543',
@@ -760,6 +815,7 @@ export const movies: Movie[] = [
     description: 'After his son Nemo is captured by a scuba diver, an overprotective clownfish embarks on a journey across the ocean to find him.',
     posterColor: 'from-cyan-600 to-blue-900',
     rating: 8.2,
+    studio: 'Disney',
   },
   {
     id: 'tt0390384',
@@ -771,6 +827,7 @@ export const movies: Movie[] = [
     description: 'A young woman is cursed by a witch and transformed into an old woman, seeking help in a mysterious wizard\'s moving castle.',
     posterColor: 'from-blue-700 to-purple-800',
     rating: 8.6,
+    studio: 'Studio Ghibli',
   },
   {
     id: 'tt0266697',
@@ -782,6 +839,7 @@ export const movies: Movie[] = [
     description: 'After surviving an assassination attempt, a woman known as The Bride hunts down the members of the Deadly Viper Assassination Squad.',
     posterColor: 'from-yellow-600 to-red-800',
     rating: 8.2,
+    studio: 'Miramax',
   },
   {
     id: 'tt0405094',
@@ -793,6 +851,7 @@ export const movies: Movie[] = [
     description: 'A Stasi agent surveilling a playwright and his actress girlfriend in 1980s East Germany finds himself drawn into their world.',
     posterColor: 'from-slate-600 to-zinc-950',
     rating: 8.4,
+    studio: 'Independent',
   },
   {
     id: 'tt1305806',
@@ -804,6 +863,7 @@ export const movies: Movie[] = [
     description: 'A retired legal counselor revisits a 1974 rape and murder case he worked on for a novel, and discovers unsettling new truths.',
     posterColor: 'from-purple-800 to-slate-950',
     rating: 8.2,
+    studio: 'Independent',
   },
   {
     id: 'tt6751668',
@@ -815,6 +875,7 @@ export const movies: Movie[] = [
     description: 'A poor family schemes to become employed by a wealthy family, but their plan grows increasingly dark and out of control.',
     posterColor: 'from-green-800 to-zinc-900',
     rating: 8.5,
+    studio: 'Independent',
   },
   {
     id: 'tt2582802',
@@ -826,6 +887,7 @@ export const movies: Movie[] = [
     description: 'A young jazz drummer at a prestigious music conservatory pushes himself to the limits under the tutelage of a terrifying instructor.',
     posterColor: 'from-red-900 to-zinc-900',
     rating: 8.5,
+    studio: 'Sony / Columbia',
   },
   {
     id: 'tt1392190',
@@ -837,6 +899,7 @@ export const movies: Movie[] = [
     description: 'In a post-apocalyptic world, a woman rebels against a tyrannical ruler as she races through the wasteland with a gang of female prisoners.',
     posterColor: 'from-orange-700 to-red-950',
     rating: 8.1,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0076759',
@@ -848,6 +911,7 @@ export const movies: Movie[] = [
     description: 'A farm boy joins a ragtag group of rebels, including a princess and a roguish pilot, to battle an evil galactic empire.',
     posterColor: 'from-yellow-700 to-slate-900',
     rating: 8.6,
+    studio: '20th Century Fox',
   },
   {
     id: 'tt0848228',
@@ -859,6 +923,7 @@ export const movies: Movie[] = [
     description: 'Earth\'s mightiest heroes are assembled to battle Loki, who schemes to conquer Earth with the help of an alien army.',
     posterColor: 'from-blue-600 to-red-800',
     rating: 8.0,
+    studio: 'Disney',
   },
   {
     id: 'tt1345836',
@@ -870,6 +935,7 @@ export const movies: Movie[] = [
     description: 'Eight years after the Joker\'s reign of chaos, Batman must return to defend Gotham City against the masked terrorist Bane.',
     posterColor: 'from-gray-800 to-zinc-950',
     rating: 8.4,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0167404',
@@ -881,6 +947,7 @@ export const movies: Movie[] = [
     description: 'A child psychologist tries to help a troubled boy who claims he can see and communicate with the dead.',
     posterColor: 'from-slate-700 to-blue-950',
     rating: 8.1,
+    studio: 'Disney',
   },
   {
     id: 'tt0087843',
@@ -892,6 +959,7 @@ export const movies: Movie[] = [
     description: 'Spanning decades, a former gangster returns to New York to reconnect with his past and recount his rise through organized crime.',
     posterColor: 'from-amber-800 to-zinc-950',
     rating: 8.3,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0095327',
@@ -903,6 +971,7 @@ export const movies: Movie[] = [
     description: 'Two siblings struggle to survive in Japan during the final months of World War II after losing their mother in a firebombing.',
     posterColor: 'from-amber-900 to-slate-950',
     rating: 8.5,
+    studio: 'Studio Ghibli',
   },
   {
     id: 'tt0469494',
@@ -914,6 +983,7 @@ export const movies: Movie[] = [
     description: 'An ambitious oil prospector clashes with a fanatical preacher in early 20th century California, driven by power and greed.',
     posterColor: 'from-amber-950 to-zinc-900',
     rating: 8.2,
+    studio: 'Paramount',
   },
   {
     id: 'tt0055630',
@@ -925,6 +995,7 @@ export const movies: Movie[] = [
     description: 'A crafty ronin wanders into a feuding town and masterfully manipulates two rival gangs into destroying each other.',
     posterColor: 'from-stone-500 to-amber-900',
     rating: 8.2,
+    studio: 'Independent',
   },
   {
     id: 'tt1877832',
@@ -936,6 +1007,7 @@ export const movies: Movie[] = [
     description: 'The X-Men send Wolverine to the past to change a major historical event that could globally impact humans and mutants.',
     posterColor: 'from-yellow-600 to-slate-900',
     rating: 8.0,
+    studio: '20th Century Fox',
   },
   {
     id: 'tt2488496',
@@ -947,6 +1019,7 @@ export const movies: Movie[] = [
     description: 'Thirty years after the Empire\'s defeat, a new threat rises and a young scavenger is drawn into the conflict between good and evil.',
     posterColor: 'from-slate-800 to-orange-950',
     rating: 7.8,
+    studio: 'Disney',
   },
   {
     id: 'tt4154756',
@@ -958,6 +1031,7 @@ export const movies: Movie[] = [
     description: 'The Avengers and their allies must be willing to sacrifice all in an attempt to defeat Thanos before his cosmic destruction.',
     posterColor: 'from-purple-700 to-slate-900',
     rating: 8.4,
+    studio: 'Disney',
   },
   {
     id: 'tt0993846',
@@ -969,6 +1043,7 @@ export const movies: Movie[] = [
     description: 'Based on the true story of Jordan Belfort, whose rise and fall as a wealthy stockbroker involved corruption, fraud, and excess.',
     posterColor: 'from-green-600 to-zinc-900',
     rating: 8.2,
+    studio: 'Paramount',
   },
   {
     id: 'tt0080455',
@@ -980,6 +1055,7 @@ export const movies: Movie[] = [
     description: 'A Victorian-era surgeon takes in a severely deformed man from a carnival freak show, exposing him to both society and cruelty.',
     posterColor: 'from-slate-500 to-neutral-900',
     rating: 8.2,
+    studio: 'Paramount',
   },
   {
     id: 'tt0042192',
@@ -991,6 +1067,7 @@ export const movies: Movie[] = [
     description: 'An aging Broadway actress takes in a seemingly devoted admirer whose ambition threatens to overtake everything she holds dear.',
     posterColor: 'from-rose-600 to-stone-900',
     rating: 8.2,
+    studio: '20th Century Fox',
   },
   {
     id: 'tt0075148',
@@ -1002,6 +1079,7 @@ export const movies: Movie[] = [
     description: 'A small-time boxer gets a rare chance to fight the heavyweight champion, transforming it into a matter of personal pride and self-belief.',
     posterColor: 'from-red-700 to-stone-900',
     rating: 8.1,
+    studio: 'MGM',
   },
   {
     id: 'tt0056172',
@@ -1013,6 +1091,7 @@ export const movies: Movie[] = [
     description: 'The story of T.E. Lawrence, the English officer who unified and led the Arab tribes to a revolt against the Ottoman Empire during WWI.',
     posterColor: 'from-amber-500 to-orange-900',
     rating: 8.3,
+    studio: 'Sony / Columbia',
   },
   {
     id: 'tt0078748',
@@ -1024,6 +1103,7 @@ export const movies: Movie[] = [
     description: 'The crew of a deep space towing vehicle is awakened from stasis by a distress call and encounters a terrifying extraterrestrial life form.',
     posterColor: 'from-slate-900 to-green-950',
     rating: 8.5,
+    studio: '20th Century Fox',
   },
   {
     id: 'tt0083658',
@@ -1035,6 +1115,7 @@ export const movies: Movie[] = [
     description: 'A blade runner must pursue and terminate four replicants who stole a ship in space and returned to Earth to find their creator.',
     posterColor: 'from-indigo-800 to-slate-950',
     rating: 8.1,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt1745960',
@@ -1046,6 +1127,7 @@ export const movies: Movie[] = [
     description: 'After more than 30 years of service, Pete "Maverick" Mitchell faces the most challenging mission of his career training a new generation of pilots.',
     posterColor: 'from-blue-700 to-orange-800',
     rating: 8.2,
+    studio: 'Paramount',
   },
   {
     id: 'tt10872600',
@@ -1057,17 +1139,7 @@ export const movies: Movie[] = [
     description: 'Spider-Man asks Doctor Strange to erase the world\'s knowledge of his secret identity, accidentally tearing open the multiverse.',
     posterColor: 'from-red-700 to-blue-900',
     rating: 8.2,
-  },
-  {
-    id: 'tt0347149',
-    title: 'Howl\'s Moving Castle',
-    year: 2004,
-    genres: ['Animation', 'Fantasy', 'Adventure'],
-    director: 'Hayao Miyazaki',
-    mainActor: 'Chieko Baisho',
-    description: 'A shy young woman bewitched into an old woman\'s body sets out to break the spell and falls for a capricious wizard.',
-    posterColor: 'from-sky-700 to-emerald-800',
-    rating: 8.2,
+    studio: 'Sony / Columbia',
   },
   {
     id: 'tt4729430',
@@ -1079,6 +1151,7 @@ export const movies: Movie[] = [
     description: 'A selfish mailman befriends a reclusive toymaker in the far north and helps create a Christmas gift-giving tradition.',
     posterColor: 'from-blue-800 to-teal-950',
     rating: 8.2,
+    studio: 'Netflix',
   },
   {
     id: 'tt0112573',
@@ -1090,6 +1163,7 @@ export const movies: Movie[] = [
     description: 'Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the cruel hands of English tyranny.',
     posterColor: 'from-green-700 to-slate-950',
     rating: 8.3,
+    studio: 'Paramount',
   },
   {
     id: 'tt2096673',
@@ -1101,6 +1175,7 @@ export const movies: Movie[] = [
     description: 'When a young girl moves to a new city, her emotions — led by Joy and Fear — navigate the upheaval inside her mind.',
     posterColor: 'from-yellow-500 to-blue-700',
     rating: 8.1,
+    studio: 'Disney',
   },
   {
     id: 'tt0097576',
@@ -1112,6 +1187,7 @@ export const movies: Movie[] = [
     description: 'Indy and his father embark on a quest for the Holy Grail, navigating Nazi peril and ancient traps along the way.',
     posterColor: 'from-stone-500 to-amber-900',
     rating: 8.2,
+    studio: 'Paramount',
   },
   {
     id: 'tt0107048',
@@ -1123,6 +1199,7 @@ export const movies: Movie[] = [
     description: 'A cynical weatherman finds himself trapped in a time loop, reliving the same Groundhog Day over and over in a small Pennsylvania town.',
     posterColor: 'from-sky-600 to-amber-700',
     rating: 8.0,
+    studio: 'Sony / Columbia',
   },
   {
     id: 'tt0116282',
@@ -1134,6 +1211,7 @@ export const movies: Movie[] = [
     description: 'A hapless car salesman hires two criminals to kidnap his wife, but the plan spirals out of control in a Minnesota winter.',
     posterColor: 'from-blue-800 to-gray-950',
     rating: 8.1,
+    studio: 'Independent',
   },
   {
     id: 'tt0120382',
@@ -1145,6 +1223,7 @@ export const movies: Movie[] = [
     description: 'A man slowly realizes his entire life has been staged for a 24-hour global reality TV show and fights to break free.',
     posterColor: 'from-sky-500 to-blue-800',
     rating: 8.2,
+    studio: 'Paramount',
   },
   {
     id: 'tt0372784b',
@@ -1156,6 +1235,7 @@ export const movies: Movie[] = [
     description: 'Two rival magicians in Victorian-era London compete to create the ultimate stage illusion, with deadly and obsessive consequences.',
     posterColor: 'from-violet-800 to-zinc-950',
     rating: 8.5,
+    studio: 'Warner Bros.',
   },
   {
     id: 'tt0361748b',
@@ -1167,6 +1247,7 @@ export const movies: Movie[] = [
     description: 'A hunter stumbles onto a drug deal gone wrong and takes the money, only to be relentlessly tracked by a ruthless assassin.',
     posterColor: 'from-stone-700 to-amber-950',
     rating: 8.1,
+    studio: 'Miramax',
   },
   {
     id: 'tt0077416',
@@ -1178,5 +1259,6 @@ export const movies: Movie[] = [
     description: 'The harrowing story of a group of Pennsylvania steelworkers whose lives are forever changed by the Vietnam War.',
     posterColor: 'from-green-900 to-stone-950',
     rating: 8.1,
+    studio: 'Universal',
   },
 ];
