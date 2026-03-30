@@ -11,7 +11,7 @@ interface MovieCardProps {
 export function MovieCard({ movie }: MovieCardProps) {
   const openMovie = useAppStore((s) => s.openMovie);
   const preferences = useAppStore((s) => s.preferences);
-  const posterUrl = usePoster(movie.id);
+  const posterUrl = usePoster(movie);
 
   const isLiked = preferences.likedMovieIds.includes(movie.id);
   const isWatchLater = preferences.watchLaterIds.includes(movie.id);

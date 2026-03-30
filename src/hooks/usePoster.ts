@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { fetchPosterUrl } from '../services/tmdb';
+import type { Movie } from '../types';
 
-export function usePoster(imdbId: string): string | null {
+export function usePoster(movie: Movie): string | null {
   const [url, setUrl] = useState<string | null>(() => {
-    // Synchronously seed from cache on first render to avoid flash
     try {
       const cache = JSON.parse(localStorage.getItem('cinematch-posters') ?? '{}');
-      return cache[imdbId] || null;
+      return cache[movie.id] || null;
     } catch {
       return null;
     }
@@ -14,11 +14,11 @@ export function usePoster(imdbId: string): string | null {
 
   useEffect(() => {
     let cancelled = false;
-    fetchPosterUrl(imdbId).then((result) => {
+    fetchPosterUrl(movie.id, movie.title, movie.year).then((result) => {
       if (!cancelled) setUrl(result);
     });
     return () => { cancelled = true; };
-  }, [imdbId]);
+  }, [movie.id, movie.title, movie.year]);
 
   return url;
 }

@@ -8,7 +8,7 @@ import { Badge } from '../ui/Badge';
 import { ActionBar } from './ActionBar';
 
 function PopupPosterHeader({ movie, onClose }: { movie: Movie; onClose: () => void }) {
-  const posterUrl = usePoster(movie.id);
+  const posterUrl = usePoster(movie);
   return (
     <div className={`bg-gradient-to-br ${movie.posterColor} h-56 relative flex items-end p-5 flex-shrink-0`}>
       {posterUrl && (
@@ -118,7 +118,7 @@ export function MoviePopup() {
 }
 
 function SimilarMovieThumbnail({ movie }: { movie: Movie }) {
-  const posterUrl = usePoster(movie.id);
+  const posterUrl = usePoster(movie);
   return (
     <div className={`w-12 h-16 rounded-lg bg-gradient-to-br ${movie.posterColor} flex-shrink-0 overflow-hidden`}>
       {posterUrl && <img src={posterUrl} alt={movie.title} className="w-full h-full object-cover" />}
